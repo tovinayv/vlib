@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "vlib-tree": [
+        "dist/vlib-tree"
+      ],
+      "vlib-tree/*": [
+        "dist/vlib-tree/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

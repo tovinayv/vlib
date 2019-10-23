@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@clr/icons/clr-icons.min.css",
+              "node_modules/@clr/ui/clr-ui.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "node_modules/@clr/icons/clr-icons.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -124,6 +129,42 @@
           }
         }
       }
-    }},
+    },
+    "vlib-tree": {
+      "projectType": "library",
+      "root": "projects/vlib-tree",
+      "sourceRoot": "projects/vlib-tree/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/vlib-tree/tsconfig.lib.json",
+            "project": "projects/vlib-tree/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/vlib-tree/src/test.ts",
+            "tsConfig": "projects/vlib-tree/tsconfig.spec.json",
+            "karmaConfig": "projects/vlib-tree/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/vlib-tree/tsconfig.lib.json",
+              "projects/vlib-tree/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "vlib"
 }
