@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-vlib-tree',
-  template: `
-    <p>
-      vlib-tree works!
-    </p>
-  `,
-  styles: []
+   selector: 'vlib-tree',
+   templateUrl: './vlib-tree.component.html',
+   styleUrls: ['./vlib-tree.component.scss']
 })
 export class VlibTreeComponent implements OnInit {
+   numbers = Array(8);
+   constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+   ngOnInit() {
+   }
 }

@@ -3,22 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VlibTreeModule } from 'vlib-tree';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    VlibTreeModule,
-    ClarityModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      ClarityModule,
+      BrowserAnimationsModule,
+      LayoutModule
+   ],
+   providers: [],
+   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+   constructor() {
+      console.log('Loading AppModule');
+   }
+}
