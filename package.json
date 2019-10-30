@@ -1,6 +1,6 @@
 {
-  "name": "vlib",
-  "version": "0.0.0",
+  "name": "@vlib/tree",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +15,7 @@
     "clean": "npm-run-all clean:vlib:tree clean:vlib",
     "copy:assets": "ncp node_modules/@clr/ui/clr-ui.min.css src/assets/ && ncp node_modules/@clr/ui/clr-ui-dark.min.css src/assets/"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.9",
     "@angular/common": "~8.2.9",
