@@ -6,7 +6,7 @@
     "start": "ng serve",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "e2e": "ng e2e --port 4400",
     "build:vlib": "ng build",
     "build:vlib:tree": "ng build vlib-tree",
     "build": "npm-run-all build:vlib:tree build:vlib",

@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    return element(by.xpath('/html/body/app-root/ng-component/div/header/div[1]/a/span')).getText() as Promise<string>;
   }
 }
