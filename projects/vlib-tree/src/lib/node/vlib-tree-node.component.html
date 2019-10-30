@@ -1,0 +1,16 @@
+<div *ngIf="data">
+  <ng-container *ngIf="!isLoading">
+    <clr-icon class="pointer collapse-button" shape="plus" (click)="expand()" *ngIf="!(data.children?.length && !data?.collapsed)">
+    </clr-icon>
+    <clr-icon class="pointer collapse-button" shape="minus" (click)="collapse()" *ngIf="data.children?.length && !data?.collapsed">
+    </clr-icon>
+  </ng-container>
+  <clr-spinner *ngIf="isLoading" clrInline></clr-spinner>
+  <span class="node-label pointer" [class.selected-node]="isSelected" [class.bold]="data.children?.length" (click)="clicked()">
+    {{data.label}}</span>
+  <div class="child-nodes" *ngIf="data.children?.length && !data.collapsed && !isLoading">
+    <vlib-tree-node *ngFor="let node of data.children" [data]="node" (selected)="nodeSelected($event)"
+      [childrenLoader]="childrenLoader" [selectedNode]="selectedNode" (collapsed)="nodeCollapsed($event)">
+    </vlib-tree-node>
+  </div>
+</div>

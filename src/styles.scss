@@ -3,7 +3,6 @@
 // Your Application Theme File
 @import "./theme.scss";
 
-
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +18,24 @@
   flex-direction: column;
 }
 
-.fill-parent {
+.fill-parent,
+.fill-width {
   width: 100%;
+}
+
+.fill-parent,
+.fill-height {
   height: 100%;
+}
+
+div {
+  display: block;
+}
+
+.pointer:hover {
+  cursor: pointer !important;
+}
+
+.bold {
+  font-weight: bolder;
 }

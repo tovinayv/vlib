@@ -1,5 +1,2 @@
-<div class="flex-container">
-  <p>
-    vlib-tree works!
-  </p>
-</div>
+<vlib-tree-node *ngFor="let item of data" [data]="item" (selected)="nodeSelected($event)"
+  (collapsed)="nodeCollapsed($event)" [selectedNode]="selectedNode" [childrenLoader]="childrenLoader"></vlib-tree-node>
